@@ -201,6 +201,7 @@ func runWeb(ctx *cli.Context) error {
 	ignSignIn := context.Toggle(&context.ToggleOptions{SignInRequired: setting.Service.RequireSignInView})
 	ignSignInAndCsrf := context.Toggle(&context.ToggleOptions{DisableCSRF: true})
 	reqSignOut := context.Toggle(&context.ToggleOptions{SignOutRequired: true})
+	disableRobots := context.Toggle(&context.ToggleOptions{DisableRobots: false})
 
 	bindIgnErr := binding.BindIgnErr
 
