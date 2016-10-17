@@ -588,6 +588,7 @@ var Service struct {
 	EnableReverseProxyAuth         bool
 	EnableReverseProxyAutoRegister bool
 	EnableCaptcha                  bool
+	DisableRobots                  bool
 }
 
 func newService() {
@@ -600,6 +601,7 @@ func newService() {
 	Service.EnableReverseProxyAuth = sec.Key("ENABLE_REVERSE_PROXY_AUTHENTICATION").MustBool()
 	Service.EnableReverseProxyAutoRegister = sec.Key("ENABLE_REVERSE_PROXY_AUTO_REGISTRATION").MustBool()
 	Service.EnableCaptcha = sec.Key("ENABLE_CAPTCHA").MustBool()
+	Service.DisableRobots = sec.Key("DISABLE_ROBOTS").MustBool()
 }
 
 var logLevels = map[string]string{

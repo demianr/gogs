@@ -172,6 +172,7 @@ func Install(ctx *context.Context) {
 	form.EnableFederatedAvatar = setting.EnableFederatedAvatar
 	form.DisableRegistration = setting.Service.DisableRegistration
 	form.EnableCaptcha = setting.Service.EnableCaptcha
+	form.DisableRobots = setting.Service.DisableRobots
 	form.RequireSignInView = setting.Service.RequireSignInView
 
 	auth.AssignForm(form, ctx.Data)

@@ -119,6 +119,8 @@
 						<dd><i class="fa fa{{if .Service.DisableMinimumKeySizeCheck}}-check{{end}}-square-o"></i></dd>*/}}
 						<dt>{{.i18n.Tr "admin.config.enable_captcha"}}</dt>
 						<dd><i class="fa fa{{if .Service.EnableCaptcha}}-check{{end}}-square-o"></i></dd>
+						<dt>{{.i18n.Tr "admin.config.disable_robots"}}</dt>
+						<dd><i class="fa fa{{if .Service.DisableRobots}}-check{{end}}-square-o"></i></dd>
 						<div class="ui divider"></div>
 						<dt>{{.i18n.Tr "admin.config.active_code_lives"}}</dt>
 						<dd>{{.Service.ActiveCodeLives}} {{.i18n.Tr "tool.raw_minutes"}}</dd>

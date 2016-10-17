@@ -19,6 +19,7 @@ type ToggleOptions struct {
 	SignOutRequired bool
 	AdminRequired   bool
 	DisableCSRF     bool
+	DisableRobots	bool
 }
 
 func Toggle(options *ToggleOptions) macaron.Handler {
@@ -53,6 +54,10 @@ func Toggle(options *ToggleOptions) macaron.Handler {
 			if ctx.Written() {
 				return
 			}
+		}
+
+		if options.DisableRobots {
+			ctx.Resp.WriteHeader("X-Robots-Tag", "none");
 		}
 
 		if options.SignInRequired {

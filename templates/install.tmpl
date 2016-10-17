@@ -196,6 +196,12 @@
 								</div>
 							</div>
 							<div class="inline field">
+								<div class="ui checkbox" id="disable-robots">
+									<label class="poping up" data-content="{{.i18n.Tr "install.disable_robots"}}"><strong>{{.i18n.Tr "install.disable_robots"}}</strong></label>
+									<input name="disable_robots" type="checkbox" {{if .disable_robots}}checked{{end}}>
+								</div>
+							</div>
+							<div class="inline field">
 								<div class="ui checkbox">
 									<label class="poping up" data-content="{{.i18n.Tr "install.require_sign_in_view_popup"}}"><strong>{{.i18n.Tr "install.require_sign_in_view"}}</strong></label>
 									<input name="require_sign_in_view" type="checkbox" {{if .require_sign_in_view}}checked{{end}}>
